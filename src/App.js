@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './pages/Home';
+import About from './pages/AboutUs';
+import Customer from './pages/Customer';
+import Login from './pages/Login';
+import MyNavsScroll from './component/MyNavsScroll';
+import TopArtist from './pages/TopArtist';
+import TopArtwork from './pages/TopArtwork';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <MyNavsScroll/>
+      <section id='home'><Home/></section>
+      <section id='about'><About/></section>
+      <section id='customer'><Customer/></section>
+      <section id='login'><Login/></section>
+      <section id='topartist'><TopArtist/></section>
+      <section id='toparwork'><TopArtwork/></section>
     </div>
   );
 }

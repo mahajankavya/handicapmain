@@ -1,0 +1,15 @@
+/* .divdecor{
+    background-image: url(../assets/icons/images/homebg.png);
+} */
+
+.section .bgimg{
+    /* background-repeat: repeat; */
+    background-repeat: repeat-x;
+    height: 100px;
+    width: 100px;
+}
+
+.homebg{
+    height: 100vh;
+    width: 100%;
+}
