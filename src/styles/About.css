@@ -1,0 +1,9 @@
+
+.Aboutsection{
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
+  background-color: rgb(130, 224, 237);
+}

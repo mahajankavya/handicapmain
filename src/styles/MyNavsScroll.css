@@ -1,0 +1,25 @@
+.navbar{
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  }
+  .mlink{
+    margin-left:  20px;
+    text-decoration: none;
+  }
+  .mfont{
+    color: rgb(15, 26, 232);
+    font-size: x-large;
+   }
+   .mlink:hover{
+     color: #00e1ff;;
+   }
+   .logoimg{
+     height: 60px;
+     width: 100px;
+   }
+   .icon{
+  color: blue;
+}

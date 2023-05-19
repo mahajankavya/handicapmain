@@ -1,91 +1,89 @@
-// import React from 'react'
-// import { Button } from 'react-bootstrap'
-
-// const TopArtwork = () => {
-//   return (
-//     <div>
-//       <h3 className='section'>topartwork</h3>
-//         <section className='swiper mySwiper'>
-//             <div className='swiper-wrapper'>
-
-//                 <div className='card swiper-slider'>
-//                     <div className='card_image'>
-//                         <img src='homebg.png' alt=''/>
-//                     </div>
-//                     <div className='card_content'>
-//                     <span className='card_title'>web designer</span>
-//                     <span className='card_name'>Rose Bush</span>
-//                     <p className='card_text'>card hii</p>
-//                     <Button className='card_btn'>View More</Button>
-//                     </div>
-//                 </div>
-
-//                 <div className='card swiper-slider'>
-//                     <div className='card_image'>
-//                         <img src='homebg.png' alt=''/>
-//                     </div>
-//                     <div className='card_content'>
-//                     <span className='card_title'>UI designer</span>
-//                     <span className='card_name'>Deepa Chand</span>
-//                     <p className='card_text'>card hii</p>
-//                     <Button className='card_btn'>View More</Button>
-//                     </div>
-//                 </div>
-
-//                 <div className='card swiper-slider'>
-//                     <div className='card_image'>
-//                         <img src='homebg.png' alt=''/>
-//                     </div>
-//                     <div className='card_content'>
-//                     <span className='card_title'>web developer</span>
-//                     <span className='card_name'>Devid Dell</span>
-//                     <p className='card_text'>card hii</p>
-//                     <Button className='card_btn'>View More</Button>
-//                     </div>
-//                 </div>
-
-//                 <div className='card swiper-slider'>
-//                     <div className='card_image'>
-//                         <img src='homebg.png' alt=''/>
-//                     </div>
-//                     <div className='card_content'>
-//                     <span className='card_title'>Mobile designer</span>
-//                     <span className='card_name'>kelsey west</span>
-//                     <p className='card_text'>card hii</p>
-//                     <Button className='card_btn'>View More</Button>
-//                     </div>
-//                 </div>
-
-
-//                     <script src='https://cdn.jsdevliver.net/npm/swiiper/swiper_bundle.min.js'></script>
-//                     <script>
-//                         var swiper = new Swiper(".mySwiper",{
-//                             loop:true,
-//                             autoplay: true,
-//                             autoplayTimeout: 1000,
-//                             autoplayHoverPause: true,
-
-//                             effect: "coverflow",
-//                             grabCursor: true,
-//                             centeredSlides: true,
-                             
-//                         })
-//                     </script>
-//               </div>
-//         </section>
-//     </div>
-//   )
-// }
-
-// export default TopArtwork
-
 import React from 'react'
+import '../styles/TopArtwork.css'
+import { Card, Col, Container, Row } from 'react-bootstrap'
+import ser1 from '../assets/images/Diamond Daze.jpeg';
+import ser2 from '../assets/images/Sunset Road Painting.jpeg';
+import ser3 from '../assets/images/Final Recap Doze Green.jpeg';
+import ser4 from '../assets/images/pastel painting.jpeg';
+import ser5 from '../assets/images/watercolor painting.jpeg';
+import ser6 from '../assets/images/watercolor.jpeg';
+import { Slide } from 'react-awesome-reveal'
+
+const serviceinfo = [
+  {
+    SerName: 'Airport transfer',
+    serImage: ser1,
+    serDisc: 'With additional wait time and fight tracking is case of delays, our service is optimized to make every airport transfer a breeze.'
+  },
+  {
+    SerName: 'intercity trips',
+    serImage: ser2,
+    serDisc: "Your stressfree solution for travelling between cities with chauffeurs all over the world."
+  },
+  {
+    SerName: 'Wedding event',
+    serImage: ser3,
+    serDisc: "Our friendly, and attentive service combined with thorough attention to details ensure you can truly relax and enjoy your special day"
+  },
+  {
+    SerName: 'Business Meeting',
+    serImage: ser4,
+    serDisc: "Focus on your meeting with your partners, forget about the road and the car which will distract your thoughts."
+  },
+  {
+    SerName: 'Hourly Service',
+    serImage: ser5,
+    serDisc: "Focus on your meeting with your partners, forget about the road and the car which will distract your thoughts."
+  },
+  {
+    SerName: 'Corporate Services',
+    serImage: ser6,
+    serDisc: "Focus on your meeting with your partners, forget about the road and the car which will distract your thoughts."
+  },
+]
 
 const TopArtwork = () => {
   return (
-    <div className='section'>
-      TopArtwork
+    <div className='TopArtworksection'>
+    <Container fluid className='Service_Container'>
+        <Slide direction='right'>
+          <h6>TopArtwork</h6>
+        </Slide>
+
+
+        <Row>
+          {
+            serviceinfo.map((item) => {
+              return (
+                <Col sm={12} mg={6} lg={6}>
+                    <Card className='Service_Card'>
+                      <Card.Img src={item.serImage} className='Card_Image' />
+                      <div style={{ flexDirection: 'column' }}>
+                        <Card.Body>
+                          <Slide direction='left'>
+                            <Card.Title className='Service_Name' >{item.SerName}</Card.Title>
+                          </Slide>
+                          <Slide direction='right'>
+                            <Card.Text className='Service_Disc' >
+                              {item.serDisc}
+                            </Card.Text>
+                          </Slide>
+                        </Card.Body>
+                        <Slide direction='left'>
+                          <button className='Read_More_Button'>Read More</button>
+                        </Slide>
+                      </div>
+                    </Card>
+                 
+
+                </Col>
+              )
+            })
+          }
+        </Row>
+      </Container>
     </div>
+    
   )
 }
 

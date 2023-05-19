@@ -5,11 +5,11 @@ import { Container } from 'react-bootstrap'
 //Import pages
 import MyNavBar from './MyNavBar'
 import Home from '../pages/Home'
-import About from '../pages/AboutUs'
-import Customer from '../pages/Customer'
 import Login from '../pages/Login'
 import TopArtist from '../pages/TopArtist'
 import TopArtwork from '../pages/TopArtwork'
+import About from '../pages/About'
+import ContactUs from '../pages/ContactUs'
 
 //import icons
 
@@ -23,7 +23,7 @@ function MyRoutes() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/about' element={<About />} />
-                    <Route path='/customer' element={<Customer />} />
+                    <Route path='/contactus' element={<ContactUs />} />
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/Topartist' element={<TopArtist/>}/>
                     <Route path='/topartwork' element={<TopArtwork/>}/>
